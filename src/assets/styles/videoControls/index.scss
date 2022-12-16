@@ -1,0 +1,33 @@
+.video-controls-container {
+  position   : absolute;
+  bottom     : 10px;
+  left       : 10px;
+  right      : 0;
+  color      : #fff;
+  z-index    : 100;
+  opacity    : 0;
+  transition : opacity 150ms ease-in-out;
+
+  & .controls {
+    display     : flex;
+    gap         : .5rem;
+    padding     : .25rem;
+    align-items : center;
+
+    & button {
+      background      : #a2947b;
+      border          : none;
+      color           : inherit;
+      width           : 50px;
+      height          : 50px;
+      font-size       : 1.1rem;
+      cursor          : pointer;
+      opacity         : 0.85;
+      transition      : opacity 150ms ease-in-out;
+      border-radius   : 50%;
+      display         : flex;
+      align-items     : center;
+      justify-content : center;
+    }
+  }
+}

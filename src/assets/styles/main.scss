@@ -1,0 +1,46 @@
+*, *::before, *::after {
+  box-sizing : border-box;
+}
+
+body {
+  margin : 0;
+}
+
+.video-container {
+  width           : 90%;
+  max-width       : 1000px;
+  display         : flex;
+  justify-content : center;
+  margin-inline   : auto;
+  position        : relative;
+  background      : #000;
+  margin-top      : 100px;
+  border-radius   : 20px;
+  overflow        : hidden;
+
+  &:hover .video-controls-container,
+  &:focus-within .video-controls-container,
+  &.paused .video-controls-container {
+    opacity: 1;
+  }
+
+  &.paused .pause-icon {
+    display: none;
+  }
+
+  &:not(.paused) .play-icon {
+    display: none;
+  }
+}
+
+video {
+  width    : 100%;
+  position : relative;
+  left     : 0;
+  top      : 0;
+  opacity  : 1;
+}
+
+button svg {
+  fill: #fff;
+}
