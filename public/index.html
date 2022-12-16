@@ -8,28 +8,43 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root">
-        <div class="video-container paused">
-            <div class="video-controls-container">
-                <div class="controls">
-                    <div class="play-pause-container">
-                        <button class="play-pause-btn">
-                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path d="M14.167 30.083V9.792l15.958 10.166Zm2.083-10.125Zm0 6.334 10-6.334-10-6.333Z"/></svg>
-                            <svg  class="pause-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path d="M23.875 30.833V9.167h5.792v21.666Zm-13.542 0V9.167h5.834v21.666Z"/></svg>
-                        </button>
-                    </div>
+<div id="root">
+    <div class="video-container paused">
+        <div class="video-controls-container">
+            <div class="controls">
+                <div class="play-pause-container">
+                    <button class="play-pause-btn">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                            <path d="M14.167 30.083V9.792l15.958 10.166Zm2.083-10.125Zm0 6.334 10-6.334-10-6.333Z"/>
+                        </svg>
+                        <svg class="pause-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                            <path d="M23.875 30.833V9.167h5.792v21.666Zm-13.542 0V9.167h5.834v21.666Z"/>
+                        </svg>
+                    </button>
+                </div>
 
-                    <div class="duration-container">
-                        <div class="current-time"></div>
-                    </div>
+                <div class="duration-container">
+                    <div class="current-time"></div>
+                </div>
+                <div class="volume-container">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 9h2v6h-2zm4-3h2v12h-2zM7 4h2v16H7zm12 7h2v2h-2zM3 10h2v4H3z"/>
+                        <defs>
+                            <linearGradient id="equalizer">
+                                <stop stop-color="#fff" offset="100%"></stop>
+                                <stop stop-color="#000" offset="0%"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
             </div>
-
-            <video>
-                <source src="video/tractive.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </div>
+
+        <video>
+            <source src="https://tractive.com/assets/static/videos/ActivityMonitoring_15s_EN.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+</div>
 </body>
 </html>
