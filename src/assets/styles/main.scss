@@ -21,15 +21,45 @@ body {
   &:hover .video-controls-container,
   &:focus-within .video-controls-container,
   &.paused .video-controls-container {
-    opacity: 1;
+    opacity : 1;
   }
 
   &.paused .pause-icon {
-    display: none;
+    display : none;
   }
 
   &:not(.paused) .play-icon {
-    display: none;
+    display : none;
+  }
+
+  .video-controls-container {
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    right      : 0;
+    color      : #fff;
+    z-index    : 100;
+    opacity    : 0;
+    transition : opacity 150ms ease-in-out;
+
+    &:before {
+      content        : "";
+      position       : absolute;
+      bottom         : 0;
+      background     : linear-gradient(to top, rgba(0, 0, 0, .75), transparent);
+      width          : 100%;
+      aspect-ratio   : 6/1;
+      z-index        : -1;
+      pointer-events : none;
+    }
+
+    & .controls {
+      display      : flex;
+      gap          : .5rem;
+      padding      : .25rem;
+      align-items  : center;
+      margin-right : 20px;
+    }
   }
 }
 
@@ -42,5 +72,5 @@ video {
 }
 
 button svg {
-  fill: #fff;
+  fill : #fff;
 }

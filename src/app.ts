@@ -1,6 +1,8 @@
 import './assets/styles/index.scss';
-import PlayPauseController from "./controls/PlayPauseController";
+import PlayPause from "./hooks/PlayPause";
+import Duration from "./hooks/Duration";
 
 const video = document.querySelector('video');
 const videoContainer: HTMLDivElement = document.querySelector('.video-container');
-const playPause = new PlayPauseController(video, videoContainer);
+const playPause = new PlayPause(video, videoContainer);
+const timer = new Duration(video);

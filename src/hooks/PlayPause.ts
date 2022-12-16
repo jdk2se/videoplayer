@@ -1,4 +1,4 @@
-export default class PlayPauseController {
+export default class PlayPause {
     constructor(video: HTMLVideoElement, container: HTMLDivElement) {
         this.video = video;
         this.container = container;
